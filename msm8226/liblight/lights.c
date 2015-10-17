@@ -284,6 +284,8 @@ static int open_lights(const struct hw_module_t* module, char const* name,
         set_light = set_light_buttons;
     else if (0 == strcmp(LIGHT_ID_ATTENTION, name))
         set_light = set_light_attention;
+    else if (0 == strcmp(LIGHT_ID_BATTERY_HIGH, name))
+        set_light = set_light_battery_high;
     else
         return -EINVAL;
 
